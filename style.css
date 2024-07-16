@@ -1,0 +1,155 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Light-Gray);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--Very-Light-Gray);
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-title > h1 {
+  margin: 0;
+  color: var(--Grayish-Blue);
+  font-weight: normal;
+}
+
+.card-title > span {
+  font-size: 32px;
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 14px;
+  color: var(--Grayish-Blue);
+  width: 450px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--Very-Light-Gray);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  width: 260px;
+  height: 180px;
+}
+
+.banner-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+}
+
+.banner-text {
+  font-size: 14px;
+  color: var(--Grayish-Blue);
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+.banner-icon {
+  margin-left: auto;
+  padding-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-icon:hover {
+  transform: scale(1.1);
+}
+
+.first-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-banner > .banner {
+  border-top: 3px solid var(--Cyan);
+}
+
+.second-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.second-banner > #banner-01 {
+  border-top: 3px solid var(--red);
+}
+
+.second-banner > #banner-02 {
+  border-top: 3px solid var(--Orange);
+}
+
+.third-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-banner > .banner {
+  border-top: 3px solid var(--Blue);
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    scale: 0.7;
+  }
+
+  .card-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
